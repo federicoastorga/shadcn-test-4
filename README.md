@@ -1,43 +1,103 @@
-# Astro Starter Kit: Minimal
+# Astro + shadcn/ui Project
 
-```sh
-npm create astro@latest -- --template minimal
+A modern web application built with Astro 5, React, and shadcn/ui components.
+
+## Tech Stack
+
+- **Framework**: Astro 5.x with React integration
+- **UI Library**: shadcn/ui (New York style)
+- **Styling**: Tailwind CSS v3
+- **TypeScript**: Strict mode enabled
+- **Import Alias**: `@/*` maps to `src/*`
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/           # shadcn/ui components (auto-generated)
+│   └── ...           # Custom components
+├── lib/
+│   └── utils.ts      # Utility functions (cn, etc.)
+├── layouts/
+│   └── Layout.astro  # Base layout
+├── styles/
+│   └── global.css    # Global styles and Tailwind CSS
+└── pages/            # Astro pages
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Getting Started
 
-## 🚀 Project Structure
+### Install Dependencies
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Development Server
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+npm run dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+Visit `http://localhost:4321` to see your app.
 
-## 🧞 Commands
+### Build for Production
 
-All commands are run from the root of the project, from a terminal:
+```bash
+npm run build
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Preview Production Build
 
-## 👀 Want to learn more?
+```bash
+npm run preview
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Adding shadcn/ui Components
+
+To add new shadcn/ui components:
+
+```bash
+npx shadcn@latest add button
+npx shadcn@latest add card
+npx shadcn@latest add dialog
+# etc.
+```
+
+Components will be automatically added to `src/components/ui/` with proper TypeScript types and styling.
+
+## Using Components in Astro
+
+When using React components in Astro files, remember to add the `client:load` directive:
+
+```astro
+---
+import { Button } from '@/components/ui/button';
+---
+
+<Button client:load>Click me</Button>
+```
+
+## Configuration Files
+
+- `astro.config.mjs` - Astro configuration with React and Tailwind
+- `tailwind.config.mjs` - Tailwind CSS configuration
+- `tsconfig.json` - TypeScript configuration with strict mode
+- `components.json` - shadcn/ui configuration
+
+## Learn More
+
+- [Astro Documentation](https://docs.astro.build)
+- [shadcn/ui Documentation](https://ui.shadcn.com)
+- [Tailwind CSS Documentation](https://tailwindcss.com)
+- [Shadcn Studio MCP](https://shadcnstudio.com/mcp)
+
+## Available Commands
+
+See [CLAUDE.md](./CLAUDE.md) for Shadcn Studio slash commands:
+
+- `/cui` - Customize existing blocks
+- `/iui` - Generate inspired designs (Pro tier)
+- `/rui` - Refine existing blocks
+- `/ftc` - Figma to code conversion

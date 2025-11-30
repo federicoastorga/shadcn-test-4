@@ -1,14 +1,30 @@
 {
-  "name": "eccentric-shell",
+  "name": "shadcn-test-2",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "start": "astro dev",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.3"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/tailwind": "^5.1.2",
+    "@radix-ui/react-slot": "^1.2.4",
+    "astro": "^5.0.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.6.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1"
   }
 }
