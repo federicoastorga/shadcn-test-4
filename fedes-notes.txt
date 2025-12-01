@@ -1,0 +1,5 @@
+🔄 make the project setup
+- save this project setup for future
+- save EEMI styling somehow that LLM understands
+- recreate hero section from EEMI reference with shadcn blocks
+- 
