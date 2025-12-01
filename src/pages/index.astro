@@ -1,36 +1,21 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import { Button } from '@/components/ui/button';
+import Header from '@/components/shadcn-studio/blocks/hero-section-01/header';
+import HeroSection from '@/components/shadcn-studio/blocks/hero-section-01/hero-section-01';
+
+const navigationData = [
+  { title: 'Programs', href: '#' },
+  { title: 'Executive Courses', href: '#' },
+  { title: 'About', href: '#' },
+  { title: 'Admissions', href: '#' },
+  { title: 'Student life', href: '#' },
+  { title: 'Partners', href: '#' },
+];
 ---
 
-<Layout title="Astro + shadcn/ui">
-  <main class="container mx-auto px-4 py-16">
-    <div class="flex flex-col items-center justify-center min-h-screen gap-8">
-      <div class="text-center space-y-4">
-        <h1 class="text-4xl font-bold tracking-tight">
-          Welcome to <span class="text-primary">Astro</span> + <span class="text-primary">shadcn/ui</span>
-        </h1>
-        <p class="text-xl text-muted-foreground">
-          Your project is set up and ready to go!
-        </p>
-      </div>
-
-      <div class="flex gap-4 flex-wrap justify-center">
-        <Button client:load>Default Button</Button>
-        <Button client:load variant="secondary">Secondary</Button>
-        <Button client:load variant="outline">Outline</Button>
-        <Button client:load variant="ghost">Ghost</Button>
-        <Button client:load variant="destructive">Destructive</Button>
-      </div>
-
-      <div class="text-center space-y-2 mt-8">
-        <p class="text-sm text-muted-foreground">
-          To add more components, run:
-        </p>
-        <code class="bg-muted px-3 py-1 rounded text-sm">
-          npx shadcn@latest add [component]
-        </code>
-      </div>
-    </div>
+<Layout title="EEMI - European Entrepreneurship And Management Institute">
+  <Header client:load navigationData={navigationData} />
+  <main>
+    <HeroSection client:load />
   </main>
 </Layout>

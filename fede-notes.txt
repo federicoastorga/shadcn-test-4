@@ -1,0 +1,10 @@
+looking at this image [Image #1] take
+  this reference to build ONLY the hero section
+  (dark background) and the double header.\
+  Take other assets inside /Users/federico/Document
+  s/shadcn-test-4/eemi-assets to use as images on
+  the section.\
+  Use this hero section reference npx shadcn@latest
+  add @ss-blocks/hero-section-01
+  Follow the current project styling don't change
+  it. 
