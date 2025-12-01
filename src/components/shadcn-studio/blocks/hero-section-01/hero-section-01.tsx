@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button'
 
 const HeroSection = () => {
   return (
-    <section className='relative flex min-h-[calc(100dvh-8rem)] flex-1 flex-col justify-center overflow-visible py-8 sm:py-12'>
+    <section className='relative flex min-h-[calc(100dvh-8rem)] max-h-[700px] flex-1 flex-col justify-center overflow-visible py-8 sm:py-12'>
       <div className='relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:px-8'>
         {/* Hero Content */}
         <div className='flex flex-col gap-4 lg:gap-6'>
